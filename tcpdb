@@ -1,0 +1,69 @@
+CREATE TABLE video_articles
+(
+  va_id              smallint unsigned NOT NULL auto_increment,
+  va_publicationDate date NOT NULL,                              # When the article was published
+  va_title           varchar(255) NOT NULL,                      # Full title of the article
+  va_summary         text NOT NULL,                              # A short summary of the article
+  va_content         mediumtext NOT NULL,                        # The HTML content of the article
+
+  PRIMARY KEY     (va_id)
+);
+
+//TCP
+
+
+CREATE TABLE user
+(
+  usr_id              smallint unsigned NOT NULL auto_increment,
+  usr_fname           varchar(255) NOT NULL,                      
+  usr_lname           varchar(255) NOT NULL,                      
+  usr_dob 	     date NOT NULL,                              		
+  usr_gender         varchar(1) NOT NULL,
+  usr_uid            varchar(50) NOT NULL,                        
+  usr_password       varchar(50) NOT NULL,
+  usr_email	     varchar(50) NOT NULL,  
+  usr_type	     boolean NOT NULL,
+  PRIMARY KEY     (usr_id)
+);
+
+
+CREATE TABLE category
+(
+  cat_id              smallint unsigned NOT NULL auto_increment,
+  cat_name           varchar(255) NOT NULL,                                            
+  PRIMARY KEY     (cat_id)
+);
+
+CREATE TABLE genre
+(
+  gen_id              smallint unsigned NOT NULL auto_increment,
+  gen_name           varchar(255) NOT NULL,                                            
+  PRIMARY KEY        (gen_id)
+);
+
+
+
+CREATE TABLE content
+(
+  con_id              smallint unsigned NOT NULL auto_increment,
+  con_title           varchar(255) NOT NULL,
+  con_tagline         varchar(255) NOT NULL,
+  con_release_date    date NOT NULL,                                            
+  con_genre	      varchar(255) NOT NULL,
+  con_language	      varchar(255) NOT NULL,
+  con_cast	      varchar(255) NOT NULL,
+  con_crew	      varchar(255) NOT NULL,
+  con_prodhouse	      varchar(255) NOT NULL,
+  con_category	      varchar(255) NOT NULL,
+  con_article	      varchar(255) NOT NULL,
+  PRIMARY KEY        (con_id)
+);
+
+
+CREATE TABLE image
+(
+  img_id              smallint unsigned NOT NULL auto_increment,
+  img_name           varchar(255) NOT NULL,                                            
+  img_data	     blob NOT NULL,
+  PRIMARY KEY     (img_id)
+);

@@ -10,3 +10,8 @@ Language:  Front end: PHP; Back End: MySQL
 Project Duration:  7 days. 
 
 It is a web-application that allows users to easily publish documents and articles online, without the need for much technical knowledge. It is an attempt to create a working prototype of a content management system with some basic features.
+
+Fun Fact
+========
+
+The idea for developing the CMS came into my mind from the header image of the CMS itself. I drew the image using MS-Paint during one really boring SPM lecture one afternoon post-lunch to keep myself awake. ;-)
